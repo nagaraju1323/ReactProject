@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+
+  .right-align {
+    position: absolute;
+    right: 0; /* Push content to the far right */
+    top: 50%; /* Optional: Align vertically */
+    transform: translateY(-50%); /* Adjust for centering */
+    text-align: right; /* Align text content to the right */
+  }
+}
+
+
+@layer components {
+  .menu-bar {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white;
+  }
+  .menu-bar:hover {
+    @apply bg-gradient-to-r from-purple-500 via-pink-500 to-red-500;
+  }
+
+  .dark .menu-bar {
+    @apply bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-gray-200;
+  }
+  .dark .menu-bar:hover {
+    @apply bg-gradient-to-r from-gray-700 via-gray-600 to-gray-500;
+  }
+}
+
+@layer base {
+  
+
+  
+}
